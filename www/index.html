@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Sub del Día</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <center><h1 style="font-family: sans-serif; color: white"> Bienvenido!</h1></center>
+        <center><p style="font-family: sans-serif; color: white">
+            El sub del día es:  
+            </p>
+        </center>
+        <center style="font-family: sans-serif; font-style: italic; color: white;text-decoration: underline">
+        <script>
+            document.body.style.backgroundColor = "green"
+            var sandwich; 
+            var date = new Date(); 
+            date.getDay();
+            switch(date.toDateString().substring(0,3))
+            { 
+                case "Mon": 
+                    sandwich = "Costillas BBQ"
+                    break;
+                case "Tue": 
+                    sandwich = "Subway Melt"
+                    break;
+                case "Wed": 
+                    sandwich = "Sub de Pollo"
+                    break;
+                case "Thu": 
+                    sandwich = "Italiano B.m.T"
+                    break;
+                case "Fri": 
+                    sandwich = "Pollo parmesano"
+                    break;
+                case "Sat": 
+                    sandwich = "Pizza sub"
+                    break;
+                case "Sun": 
+                    sandwich = "Jamon de Cerdo"
+                    break; 
+                default: sandwich = "No se puede obtener informacion en este momento"
+                    break; 
+            }
+            document.write(sandwich.toString()); 
+        </script>
+        </center>
+        <center>
+            <p style="font-family: sans-serif; color: white">
+            El precio del sub es de $39 pesos
+            </p>
+            <style>
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                    color: white;
+                }
+
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+                    color: white;
+                }
+            </style>
+            <table>
+                <tr>
+                <th>Dia de la semana</th>
+                <th>Sub del dia</th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Costillas BBQ</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>Subway Melt</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>Sub de Pollo</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>Italiano B.m.T</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>Pollo Parmesano</td>
+                </tr>
+                <tr>
+                    <td>Sabado</td>
+                    <td>Pizza Sub</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Jamon de Cerdo</td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
